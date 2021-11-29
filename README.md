@@ -68,7 +68,7 @@ loss = criterion_kd(student_outputs/T, teacher_outputs/T)
 ...
 ```
 
-##Pre-trained Model
+## Pre-trained Model
 
 We currently provide the last epoch checkpoints and will add the best ones together with more models soon. (⋇ indicates without slice.)
 
