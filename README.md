@@ -6,7 +6,7 @@ Pytorch implementation of our paper: [Sliced Recursive Transformer](https://arxi
 <img width=48% src="imgs/recursion.png"/>
 </div>
 
-\
+<br>
 
 <div align=center>
 <img width=100% src="imgs/slice.png"/>
