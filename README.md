@@ -6,7 +6,7 @@ Pytorch implementation of our paper: [Sliced Recursive Transformer](https://arxi
 <img width=48% src="imgs/recursion.png"/>
 </div>
 
-\\
+\
 
 <div align=center>
 <img width=100% src="imgs/slice.png"/>
@@ -15,7 +15,7 @@ Pytorch implementation of our paper: [Sliced Recursive Transformer](https://arxi
 
 ### Abstract
 
-We present a neat yet effective recursive operation on vision transformers that can improve parameter utilization without involving additional parameters. This is achieved by sharing weights across depth of transformer networks. The proposed method can obtain a substantial gain (~2%) simply using naive recursive operation, requires no special or sophisticated knowledge for designing principles of networks, and introduces minimum computational overhead to the training procedure. To reduce the additional computation caused by recursive operation while maintaining the superior accuracy, we propose an approximating method through multiple sliced group self-attentions across recursive layers which can reduce the cost consumption by 10~30% with minimal performance loss. We call our model Sliced Recursive Transformer (SReT), which is compatible with a broad range of other designs for efficient vision transformers. Our best model establishes significant improvement on ImageNet-1K over state-of-the-art methods while containing fewer parameters.
+We present a neat yet effective recursive operation on vision transformers that can improve parameter utilization without involving additional parameters. This is achieved by sharing weights across depth of transformer networks. The proposed method can obtain a substantial gain (about 2%) simply using naive recursive operation, requires no special or sophisticated knowledge for designing principles of networks, and introduces minimum computational overhead to the training procedure. To reduce the additional computation caused by recursive operation while maintaining the superior accuracy, we propose an approximating method through multiple sliced group self-attentions across recursive layers which can reduce the cost consumption by 10~30% with minimal performance loss. We call our model Sliced Recursive Transformer (SReT), which is compatible with a broad range of other designs for efficient vision transformers. Our best model establishes significant improvement on ImageNet-1K over state-of-the-art methods while containing fewer parameters.
 
 
 ## SReT Models
