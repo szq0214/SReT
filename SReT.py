@@ -364,7 +364,6 @@ def SReT_T(pretrained=False, **kwargs):
         groups2=[2, 1, 1],
         mlp_ratio=3.6,
         np_mlp_ratio=1,
-        drop_path_rate=0.1,
         **kwargs
     )
     if pretrained:
@@ -387,7 +386,6 @@ def SReT_LT(pretrained=False, **kwargs):
         groups2=[2, 1, 1], # [1, 1, 1]
         mlp_ratio=4.0,
         np_mlp_ratio=1,
-        drop_path_rate=0.1,
         **kwargs
     )
     if pretrained:
@@ -409,7 +407,6 @@ def SReT_S(pretrained=False, **kwargs):
         groups2=[2, 1, 1],
         mlp_ratio=3.0,
         np_mlp_ratio=2,
-        drop_path_rate=0.2,
         **kwargs
     )
     if pretrained:
@@ -433,7 +430,6 @@ def SReT_T_distill(pretrained=False, **kwargs):
         groups2=[2, 1, 1],
         mlp_ratio=3.6,
         np_mlp_ratio=1,
-        drop_path_rate=0.1,
         **kwargs
     )
     if pretrained:
@@ -456,7 +452,6 @@ def SReT_LT_distill(pretrained=False, **kwargs):
         groups2=[2, 1, 1],
         mlp_ratio=4.0,
         np_mlp_ratio=1,
-        drop_path_rate=0.1,
         **kwargs
     )
     if pretrained:
@@ -478,7 +473,6 @@ def SReT_S_distill(pretrained=False, **kwargs):
         groups2=[2, 1, 1],
         mlp_ratio=3.0,
         np_mlp_ratio=2,
-        drop_path_rate=0.2,
         **kwargs
     )
     if pretrained:

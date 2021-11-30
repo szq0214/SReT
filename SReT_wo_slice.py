@@ -327,6 +327,7 @@ class DistilledRecursiveTransformer(RecursiveTransformer):
         else:
             return x_cls
 
+
 @register_model
 def SReT_T_wo_slice(pretrained=False, **kwargs):
     model = RecursiveTransformer(
@@ -338,7 +339,6 @@ def SReT_T_wo_slice(pretrained=False, **kwargs):
         recursive_num=[2, 5, 3],
         heads=[2, 4, 8],
         mlp_ratio=3.6,
-        np_mlp_ratio=1,
         **kwargs
     )
     if pretrained:
@@ -359,7 +359,6 @@ def SReT_LT_wo_slice(pretrained=False, **kwargs):
         recursive_num=[2, 5, 3],
         heads=[2, 4, 8],
         mlp_ratio=4.0,
-        np_mlp_ratio=1,
         **kwargs
     )
     if pretrained:
@@ -381,7 +380,6 @@ def SReT_S_wo_slice(pretrained, **kwargs):
         heads=[3, 6, 12],
         mlp_ratio=3,
         np_mlp_ratio=2,
-        drop_path_rate=0.2,
         **kwargs
     )
     if pretrained:
@@ -423,7 +421,6 @@ def SReT_S_wo_slice_finetune_384(pretrained=False, **kwargs):
         heads=[3, 6, 12],
         mlp_ratio=3,
         np_mlp_ratio=2,
-        drop_path_rate=0.2,
         **kwargs
     )
     if pretrained:
