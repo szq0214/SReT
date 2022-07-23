@@ -1,12 +1,22 @@
 # Sliced Recursive Transformer (SReT)
 
-Pytorch implementation of our paper: [Sliced Recursive Transformer](https://arxiv.org/abs/2111.05297), Zhiqiang Shen, Zechun Liu and Eric Xing, CMU and MBZUAI.
- 
+Pytorch implementation of our paper: [Sliced Recursive Transformer](https://arxiv.org/abs/2111.05297) (ECCV 2022), Zhiqiang Shen, Zechun Liu and Eric Xing.
+
+### FLOPs and Params Comparison
+
+<div align=center>
+<img width=90% src="imgs/SReT_acc_vs_params_and_flops.png"/>
+</div>
+
+### Our Approach
+
+- Resursion operation:
+
 <div align=center>
 <img width=48% src="imgs/recursion.png"/>
 </div>
 
-<br>
+- Sliced Group Self-Attention:
 
 <div align=center>
 <img width=100% src="imgs/slice.png"/>
@@ -15,7 +25,7 @@ Pytorch implementation of our paper: [Sliced Recursive Transformer](https://arxi
 
 ### Abstract
 
-We present a neat yet effective recursive operation on vision transformers that can improve parameter utilization without involving additional parameters. This is achieved by sharing weights across depth of transformer networks. The proposed method can obtain a substantial gain (about 2%) simply using naive recursive operation, requires no special or sophisticated knowledge for designing principles of networks, and introduces minimum computational overhead to the training procedure. To reduce the additional computation caused by recursive operation while maintaining the superior accuracy, we propose an approximating method through multiple sliced group self-attentions across recursive layers which can reduce the cost consumption by 10~30% with minimal performance loss. We call our model Sliced Recursive Transformer (SReT), which is compatible with a broad range of other designs for efficient vision transformers. Our best model establishes significant improvement on ImageNet-1K over state-of-the-art methods while containing fewer parameters.
+We present a neat yet effective recursive operation on vision transformers that can improve parameter utilization without involving additional parameters. This is achieved by sharing weights across the depth of transformer networks. The proposed method can obtain a substantial gain (~2%) simply using naive recursive operation, requires no special or sophisticated knowledge for designing principles of networks, and introduces minimal computational overhead to the training procedure. To reduce the additional computation caused by recursive operation while maintaining the superior accuracy, we propose an approximating method through multiple sliced group self-attentions across recursive layers which can reduce the cost consumption by 10~30% with minimal performance loss. We call our model Sliced Recursive Transformer (SReT), a novel and parameter-efficient vision transformer design that is compatible with a broad range of other designs for efficient ViT architectures. Our best model establishes significant improvement on ImageNet-1K over state-of-the-art methods while containing fewer parameters. The flexible scalability has shown great potential for scaling up models and constructing extremely deep vision transformers.
 
 
 ## SReT Models
@@ -70,7 +80,7 @@ loss = criterion_kd(student_outputs/T, teacher_outputs/T)
 
 ## Pre-trained Model
 
-We currently provide the last epoch checkpoints and will add the best ones together with more models soon. (⋇ indicates without slice.)
+We currently provide the last epoch checkpoints and will add the best ones together with more models soon. (⋇ indicates without slice.) **We notice that using a larger initial lr ($0.001\times$ $batchsize \over 512$) with longer warmup epochs = 30 can obtain better results on SReT.**
 
 | Model   |  FLOPs |  #params  | accuracy  | weights (last) |weights (best) |logs |configurations |
 |:-------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
@@ -104,4 +114,4 @@ If you find our code is helpful for your research, please cite:
 
 ## Contact
 
-Zhiqiang Shen (zhiqians at andrew.cmu.edu or zhiqiangshen0214 at gmail.com) 
+Zhiqiang Shen (zhiqiangshen0214 at gmail.com or zhiqians at andrew.cmu.edu) 
