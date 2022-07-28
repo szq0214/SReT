@@ -10,7 +10,7 @@ Pytorch implementation of our paper: [Sliced Recursive Transformer](https://arxi
 
 ### Our Approach
 
-- Resursion operation:
+- Recursion operation:
 
 <div align=center>
 <img width=48% src="imgs/recursion.png"/>
@@ -59,7 +59,7 @@ print(model(torch.randn(1, 3, 224, 224)))
 ...
 ```
 
-Train SReT models with knowledge distillation (recommend to train with [FKD](https://github.com/szq0214/FKD)):
+Train SReT models with knowledge distillation (recommend training with [FKD](https://github.com/szq0214/FKD), which is faster with higher performance):
 
 ```Python
 import torch
