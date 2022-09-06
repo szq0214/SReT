@@ -80,7 +80,7 @@ loss = criterion_kd(student_outputs/T, teacher_outputs/T)
 
 ## Pre-trained Model
 
-We currently provide the last epoch checkpoints and will add the best ones together with more models soon. (⋇ indicates without slice.) **We notice that using a larger initial lr ($0.001 \times$ $batchsize \over 512$) with longer warmup epochs = 30 can obtain better results on SReT.**
+We currently provide the last epoch checkpoints and will add the best ones together with more models soon. (⋇ indicates without slice.) **We notice that using a larger initial lr (0.001 $\times$ $batchsize \over 512$) with longer warmup epochs = 30 can obtain better results on SReT.**
 
 | Model   |  FLOPs |  #params  | accuracy  | weights (last) |weights (best) |logs |configurations |
 |:-------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
